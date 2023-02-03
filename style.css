@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap');
+
+:root {
+  --color-bg: #222323;
+  --color-fg: #eee;
+  --color-mid: #888989;
+  --color-1: #e33;
+  --color-1-shade: #AD1C1C;
+  --color-1-light: #F37272;
+  --font-title: "Fredoka One";
+  --font-main: "Varela Round";
+}
+
+* {
+  font-family: var(--font-main);
+  box-sizing: border-box;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+html {
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  font-size: 1.5em;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-title);
+}
+
+a {
+  color: var(--color-1-light);
+  font-weight: bold;
+}
+
+/*** input styles ***/
+
+button {
+  background-color: var(--color-1);
+  color: var(--color-fg);
+  border-radius: 6px;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0.25em 1em;
+  border: none;
+  border-bottom: 8px solid var(--color-1-shade);
+}
+
+button:active {
+  margin-top: 8px;
+  border-bottom: 0px solid var(--color-fg);
+}
+
+/*** screens ***/
+
+.screen {
+  min-height: 100%;
+  min-width: 100%;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen.hide {
+  display: none;
+}
+
+.screen.show {
+  display: flex;
+}
+
+.screen section {
+  background-color: var(--color-mid);
+  border: 2px solid var(--color-fg);
+  min-width: 50vw;
+  margin: 2em;
+  border-radius: 6px;
+  padding: 1em;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.screen .cta {
+  margin: 2em;
+}
+
+/*** modals ***/
+
+.modal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg);
+}
+
+.modal > * {
+  max-width: 90%;
+  width: 400px;
+  margin: 50px;
+  text-align: center;
+}
+
+/*** menu ***/
+
+ul.menu {
+  text-align: center;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul.menu li {
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+
+/* whatever is in the location bar #frag, show it */
+
+:target { display: flex; }
+
+/*** specific engine page styling ***/
+
+#screen-splash {
+  background-color: var(--color-bg);
+}
+
+#screen-splash .logo {
+  width: 100px;
+}
+
+#screen-title {
+  display: flex !important;
+}
+
+#game-title {
+  width: 100vw;
+  font-size: 4em;
+}
+
+#game-title * {
+  font-family: var(--font-title);
+}
+
+#game-title text.title-text-under {
+  stroke: var(--color-fg);
+}
+
+#game-title text.title-text-over {
+  fill: var(--color-1);
+}
+
+/* in-game styling */
+
+.sprite {
+  display: block;
+  image-rendering: optimizeSpeed;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: pixelated;
+  background-image: url("colored_tilemap_packed.png");
+}
+
+.free {
+  position: absolute;
+  transform: none;
+}
+
+.empty {
+  background-position: -8px -48px;
+}
+
+/*** onscreen arrow buttons ***/
+
+#arrows {
+  display: none;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+#arrows > * {
+  float: left;
+  font-size: 16px;
+  bottom: 0px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#arrows > * > span {
+  pointer-events: none;
+}
+
+#btn-left {
+  position: absolute;
+  right: 7em;
+}
+
+#btn-right {
+  position: absolute;
+  right: 0em;
+}
+
+#btn-up {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 3.5em;
+  margin-bottom: 3.75em;
+}
+
+#btn-down {
+  transform: rotate(90deg);
+  position: absolute;
+  right: 3.5em;
+}
+
+#btn-skip {
+  position: absolute;
+  right: 0em;
+  margin-bottom: 3.75em;
+  padding: 0px;
+}

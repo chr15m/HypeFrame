@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "browser-sync": "^2.27.11"
+  },
+  "scripts": {
+    "watch": "browser-sync start --server . --files . --no-open --port 8000 --files '*.css,*.html' --no-ui"
+  }
+}

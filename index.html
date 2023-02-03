@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>HTML5 Game Engine</title>
+    <meta name="description" content="Your game description goes here.">
+    <link rel="icon" href="icon.svg">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="style.css" rel="stylesheet" id="style">
+    <link href="fx.css" rel="stylesheet" id="style">
+  </head>
+  <body>
+
+    <!-- engine splash -->
+    <div id="screen-splash" class="screen screen-fade-out">
+      <img src="icon.svg" class="logo">
+      <p>HTML5 Game Engine</p>
+    </div>
+
+    <!-- title screen -->
+    <div id="screen-title" class="screen">
+      <div class="game-title-animation">
+        <svg id="game-title" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="curve" d="M 100 150 C 200 100 500 100 600 150"/>
+          </defs>
+          <text class="title-text-under" stroke-width="10px">
+            <textPath xlink:href="#curve" text-anchor="middle" startOffset="50%">
+              <tspan class="game-title-text">Game Title</tspan>
+            </textPath>
+          </text>
+          <text class="title-text-over" stroke-width="10px">
+            <textPath xlink:href="#curve" text-anchor="middle" startOffset="50%">
+              <tspan class="game-title-text">Game Title</tspan>
+            </textPath>
+          </text>
+        </svg>
+      </div>
+      <ul class="menu">
+        <li><a href="#screen-instructions">Instructions</a></li>
+        <li><a href="#screen-settings">Settings</a></li>
+        <li><a href="#screen-credits">Credits</a></li>
+      </ul>
+      <a href="#game" class="cta"><button id="play">Play</button></a>
+    </div>
+
+    <!-- instructions screen -->
+    <div id="screen-instructions" class="screen modal">
+      <section>
+        <h3>Instructions</h3>
+        <div>
+          <p>
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+            Write your instructions here.
+          </p>
+        </div>
+      </section>
+      <a href="#screen-title" class="cta"><button>Ok</button></a>
+    </div>
+
+    <!-- settings screen -->
+    <div id="screen-settings" class="screen modal">
+      <section>
+        <h3>Settings</h3>
+        <div>
+          <p>Put your settings menu here.</p>
+        </div>
+      </section>
+      <a href="#screen-title" class="cta"><button>Ok</button></a>
+    </div>
+
+    <!-- credits screen -->
+    <div id="screen-credits" class="screen modal">
+      <section>
+        <p id="author">By Your Name</p>
+        <p>Made with:</p>
+        <p><a href="https://chr15m.itch.io/html5-game-engine"
+              target="_blank">
+          HTML5 Game Engine</a></p>
+      </section>
+      <a href="#screen-title" class="cta"><button>Ok</button></a>
+    </div>    
+
+    <!-- win screen -->
+    <div id="screen-win" class="screen modal">
+      <p>Win!</p>
+      <a href="#screen-title" class="cta"><button>Ok</button></a>
+    </div>
+
+    <!-- lose screen -->
+    <div id="screen-lose" class="screen modal">
+      <p>Lose!</p>
+      <a href="#screen-title" class="cta"><button>Ok</button></a>
+    </div>
+
+    <!-- game screen -->
+    <div id="screen-game" class="screen">
+      <div id="surface"></div>
+      <div class="hud hud-top"></div>
+      <div id="arrows">
+        <div id="btn-left"><span>&lt;</span></div>
+        <div id="btn-up"><span>&lt;</span></div>
+        <div id="btn-down"><span>&gt;</span></div>
+        <div id="btn-right"><span>&gt;</span></div>
+        <div id="btn-skip"><span>.</span></div>
+      </div>
+    </div>
+
+  </body>
+</html>
