@@ -61,6 +61,11 @@ button:active {
   border-bottom: 0px solid var(--color-fg);
 }
 
+button:focus {
+  box-shadow: 0px 0px 10px var(--color-fg), 0px 0px 20px var(--color-1);
+  outline: none;
+}
+
 /*** screens ***/
 
 .screen {
@@ -136,8 +141,21 @@ ul.menu li {
   font-size: 1.5em;
 }
 
-ul.menu li:focus {
-  text-shadow: 0px 0px 10px white;
+ul.menu a {
+  text-decoration: none;
+}
+
+ul.menu a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+ul.menu a:focus::before {
+  content: "> ";
+}
+
+ul.menu a:focus::after {
+  content: " <";
 }
 
 /* whatever is in the location bar #frag, show it */
