@@ -44,58 +44,18 @@
         <li><a href="#screen-settings">Settings</a></li>
         <li><a href="#screen-credits">Credits</a></li>
       </ul>
-      <a href="#game" class="cta"><button id="play">Play</button></a>
+      <div class="input-row">
+        <a href="#screen-game" class="cta"><button id="play">Play</button></a>
+      </div>
+      <p><i class="icon-notice icon-gamepad"></i></p>
     </div>
 
     <!-- instructions screen -->
-    <div id="screen-instructions" class="screen modal">
+    <div id="screen-instructions" class="screen">
       <section>
         <h3>Instructions</h3>
         <div>
           <p>
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
-            Write your instructions here.
             Write your instructions here.
           </p>
         </div>
@@ -104,7 +64,7 @@
     </div>
 
     <!-- settings screen -->
-    <div id="screen-settings" class="screen modal">
+    <div id="screen-settings" class="screen">
       <section>
         <h3>Settings</h3>
         <div>
@@ -115,7 +75,7 @@
     </div>
 
     <!-- credits screen -->
-    <div id="screen-credits" class="screen modal">
+    <div id="screen-credits" class="screen">
       <section>
         <p id="author">By Your Name</p>
         <p>Made with:</p>
@@ -127,27 +87,32 @@
     </div>    
 
     <!-- win screen -->
-    <div id="screen-win" class="screen modal">
+    <div id="screen-win" class="screen">
       <p>Win!</p>
       <a href="#screen-title" class="cta"><button>Ok</button></a>
     </div>
 
     <!-- lose screen -->
-    <div id="screen-lose" class="screen modal">
+    <div id="screen-lose" class="screen">
       <p>Lose!</p>
       <a href="#screen-title" class="cta"><button>Ok</button></a>
     </div>
 
     <!-- game screen -->
     <div id="screen-game" class="screen">
-      <div id="surface"></div>
+      <div id="surface">Your game goes here.</div>
       <div class="hud hud-top"></div>
-      <div id="arrows">
-        <div id="btn-left"><span>&lt;</span></div>
-        <div id="btn-up"><span>&lt;</span></div>
-        <div id="btn-down"><span>&gt;</span></div>
-        <div id="btn-right"><span>&gt;</span></div>
-        <div id="btn-skip"><span>.</span></div>
+      <div class="touch-ui">
+        <a class="exit-button touch-ui" href="#title">
+          <i class="icon-reply"></i>
+        </a>
+        <div id="arrows">
+          <div id="btn-left"><i class="icon-left-big"></i></div>
+          <div id="btn-up"><i class="icon-up-big"></i></div>
+          <div id="btn-down"><i class="icon-down-big"></i></div>
+          <div id="btn-right"><i class="icon-right-big"></i></div>
+          <div id="btn-center"><i class="icon-circle"></i></div>
+        </div>
       </div>
     </div>
 

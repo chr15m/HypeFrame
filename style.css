@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap');
+/* load fonts and icons */
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Varela+Round&display=swap");
+@import url("icons-fontello-embedded.css");
 
 :root {
   --color-bg: #222323;
@@ -69,6 +71,7 @@ button:active {
   position: absolute;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-bg);
 }
 
 .screen.hide {
@@ -80,6 +83,7 @@ button:active {
 }
 
 .screen section {
+  text-align: center;
   background-color: var(--color-mid);
   border: 2px solid var(--color-fg);
   min-width: 50vw;
@@ -88,6 +92,10 @@ button:active {
   padding: 1em;
   max-height: 80vh;
   overflow-y: scroll;
+}
+
+.screen section a {
+  color: var(--color-fg);
 }
 
 .screen .cta {
@@ -128,15 +136,15 @@ ul.menu li {
   font-size: 1.5em;
 }
 
+ul.menu li:focus {
+  text-shadow: 0px 0px 10px white;
+}
+
 /* whatever is in the location bar #frag, show it */
 
 :target { display: flex; }
 
 /*** specific engine page styling ***/
-
-#screen-splash {
-  background-color: var(--color-bg);
-}
 
 #screen-splash .logo {
   width: 100px;
@@ -163,33 +171,41 @@ ul.menu li {
   fill: var(--color-1);
 }
 
+.icon-notice {
+  color: var(--color-mid);
+  font-size: 2em;
+}
+
 /* in-game styling */
 
 .sprite {
   display: block;
-  image-rendering: optimizeSpeed;
-  image-rendering: crisp-edges;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -o-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  -ms-interpolation-mode: nearest-neighbor;
-  image-rendering: pixelated;
-  background-image: url("colored_tilemap_packed.png");
 }
 
-.free {
-  position: absolute;
-  transform: none;
+/*** touch screen user interface ***/
+
+.touch-ui {
+  display: none;
 }
 
-.empty {
-  background-position: -8px -48px;
+.touch-ui i {
+  font-size: 1.5em;
 }
 
-/*** onscreen arrow buttons ***/
+.touch-ui a {
+  color: var(--color-fg) !important;
+  font-weight: bold;
+}
+
+.exit-button {
+  position: fixed;
+  top: 0.5em;
+  left: 0.5em;
+}
+
+/* onscreen arrow button layout */
 
 #arrows {
-  display: none;
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -197,7 +213,6 @@ ul.menu li {
 
 #arrows > * {
   float: left;
-  font-size: 16px;
   bottom: 0px;
   width: 60px;
   height: 60px;
@@ -211,31 +226,30 @@ ul.menu li {
 }
 
 #btn-left {
-  position: absolute;
-  right: 7em;
+  position: fixed;
+  right: 4em;
+  margin-bottom: 2em;
 }
 
 #btn-right {
-  position: absolute;
+  position: fixed;
   right: 0em;
+  margin-bottom: 2em;
 }
 
 #btn-up {
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3.5em;
-  margin-bottom: 3.75em;
+  position: fixed;
+  right: 2em;
+  margin-bottom: 4em;
 }
 
 #btn-down {
-  transform: rotate(90deg);
-  position: absolute;
-  right: 3.5em;
+  position: fixed;
+  right: 2em;
 }
 
-#btn-skip {
-  position: absolute;
-  right: 0em;
-  margin-bottom: 3.75em;
-  padding: 0px;
+#btn-center {
+  position: fixed;
+  right: 2em;
+  margin-bottom: 2em;
 }
