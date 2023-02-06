@@ -17,3 +17,12 @@ Here is a list of the stuff it takes care of:
 
 HypeFrame uses browser capabilities wherever possible.
 For example it uses native DOM elements and CSS instead of Canvas.
+
+# Use it
+
+1. [Download a zip](https://github.com/chr15m/HypeFrame/archive/refs/heads/main.zip) of the code, or check out the code with `git`.
+2. Started editing.
+
+# Dev
+
+If you use Node you can install the deps and run the local server with: `npm run watch`.
