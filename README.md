@@ -1,6 +1,6 @@
 This is a minimal HTML5 game boilerplate / framework.
 For making 2d keyboard controlled games.
-Touch screen and gamepad are supported by mapping inputs to virtual key presses.
+Touch screen is supported by mapping inputs to virtual key presses.
 
 ![Default title screen](./src/titlescreen.png)
 
