@@ -1,8 +1,12 @@
 {
   "devDependencies": {
-    "browser-sync": "^2.27.11"
+    "browser-sync": "^2.27.11",
+    "jshint": "^2.13.6"
   },
   "scripts": {
     "watch": "browser-sync start --server . --files . --no-open --port 8000 --files '*.css,*.html' --no-ui"
+  },
+  "jshintConfig": {
+    "esversion": 6
   }
 }
