@@ -4,16 +4,13 @@
     <title>HTML5 Game Engine</title>
     <meta name="description" content="Your game description goes here.">
     <link rel="icon" href="icon.svg">
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <link href="style.css" rel="stylesheet" id="style">
     <link href="fx.css" rel="stylesheet" id="style">
   </head>
   <body>
-
     <!-- engine splash -->
     <div id="screen-splash" class="screen screen-fade-out">
       <img src="icon.svg" class="logo">
@@ -45,7 +42,7 @@
         <li><a href="#screen-credits">Credits</a></li>
       </ul>
       <div class="input-row">
-        <a href="#screen-game" class="cta" tabIndex="-1">
+        <a href="#screen-game" class="cta" tabindex="-1">
           <button id="play" autofocus=autofocus>Play</button>
         </a>
       </div>
@@ -62,7 +59,9 @@
           </p>
         </div>
       </section>
-      <a href="#screen-title" class="cta"><button>Ok</button></a>
+      <a href="#screen-title" class="cta" tabindex="-1">
+        <button>Ok</button>
+      </a>
     </div>
 
     <!-- settings screen -->
@@ -73,7 +72,9 @@
           <p>Put your settings menu here.</p>
         </div>
       </section>
-      <a href="#screen-title" class="cta"><button>Ok</button></a>
+      <a href="#screen-title" class="cta" tabindex="-1">
+        <button>Ok</button>
+      </a>
     </div>
 
     <!-- credits screen -->
@@ -85,19 +86,25 @@
               target="_blank">
           HTML5 Game Engine</a></p>
       </section>
-      <a href="#screen-title" class="cta"><button>Ok</button></a>
+      <a href="#screen-title" class="cta" tabindex="-1">
+        <button>Ok</button>
+      </a>
     </div>    
 
     <!-- win screen -->
     <div id="screen-win" class="screen">
       <p>Win!</p>
-      <a href="#screen-title" class="cta"><button>Ok</button></a>
+      <a href="#screen-title" class="cta" tabindex="-1">
+        <button>Ok</button>
+      </a>
     </div>
 
     <!-- lose screen -->
     <div id="screen-lose" class="screen">
       <p>Lose!</p>
-      <a href="#screen-title" class="cta"><button>Ok</button></a>
+      <a href="#screen-title" class="cta" tabindex="-1">
+        <button>Ok</button>
+      </a>
     </div>
 
     <!-- game screen -->
@@ -105,7 +112,7 @@
       <div id="surface">Your game goes here.</div>
       <div class="hud hud-top"></div>
       <div class="touch-ui">
-        <a class="exit-button touch-ui" href="#title">
+        <a class="exit-button" href="#title">
           <i class="icon-reply"></i>
         </a>
         <div id="arrows">
@@ -117,6 +124,7 @@
         </div>
       </div>
     </div>
-
   </body>
+  <script src="helpers.js"></script>
+  <script>normalizeInputMethods();</script>
 </html>
