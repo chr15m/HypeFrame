@@ -1,19 +1,20 @@
 This is a minimal HTML5 game boilerplate / framework.
-For making 2d keyboard controlled games.
-Touch screen is supported by mapping inputs to virtual key presses.
-
-![Default title screen](./src/titlescreen.png)
+For making basic 2d keyboard controlled games.
 
 HypeFrame takes care of the annoying boilerplate stuff so you can concentrate on the game.
-You can use whatever game engine you like, including React or other web frameworks.
+You can use whatever game engine you like such as Three.js, Photon, or even React and other web frameworks.
+
+![Default title screen](./src/titlescreen.png)
 
 Here is a list of the stuff it takes care of:
 
  * Screens management (splash, title, settings, game screen).
- * Menus (normalized for keyboard and touch).
- * Play / restart button.
- * Controls (normalized for touch with arrow buttons).
+ * Menus.
+ * Keyboard, Touch screen, and gamepad inputs.
  * CSS effects stylesheet.
+
+Touch screen is supported by mapping on-screen arrows to virtual key presses.
+Gamepad is supported by mapping inputs to virtual key presses.
 
 HypeFrame uses browser capabilities wherever possible.
 For example it uses native DOM elements and CSS instead of Canvas.
