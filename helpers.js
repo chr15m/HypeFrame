@@ -12,7 +12,12 @@ function nonTopLevelScreen(hash) {
 /* Normalize various types of input (touch screen, keyboard, gamepad). */
 
 function normalizeInputMethods() {
-  normalizeBackbutton();
+  // after the splash animation show the title screen
+  $("#screen-splash").addEventListener("animationend", (ev) => {
+    window.location.hash = "#screen-title";
+  });
+  normalizeBackButton();
+  normalizeMenuNavigation();
   normalizeTouchUI();
   normalizeGamepad();
 }
@@ -40,6 +45,20 @@ function normalizeBackButton() {
   });
 }
 
+function normalizeMenuNavigation() {
+  // Listen out for arrow keys and turn them into menu nav
+  document.addEventListener("keydown", (ev) => {
+    if (window.location.hash != "#screen-game") {
+      if (ev.key == "ArrowDown") {
+        focusNextElement(1);
+      }
+      if (ev.key == "ArrowUp") {
+        focusNextElement(-1);
+      }
+    }
+  });
+}
+
 function normalizeTouchUI() {
   let useTouch = false;
   // If touches are detected turn on the touchscreen interface
@@ -62,11 +81,11 @@ function normalizeGamepad() {
 // https://stackoverflow.com/a/35173443
 function focusNextElement(amount) {
   //add all elements we want to include in our selection
-  var focussableElements = 'button:not([disabled]), a:not([disabled]):not([tabindex="-1"], input[type=text]:not([disabled]):not([tabindex="-1"]), [tabindex]:not([disabled]):not([tabindex="-1"])';
-  console.log(document.querySelectorAll(focussableElements));
+  var focussableElements = 'button:not([disabled]):not([display=none]), a:not([disabled]):not([tabindex="-1"]):not([display=none]), input[type=text]:not([disabled]):not([tabindex="-1"]):not([display=none]), [tabindex]:not([disabled]):not([tabindex="-1"]):not([display=none])';
+  //console.log("allFocussable", $$(focussableElements));
   if (document.activeElement) {
     var focussable = Array.prototype.filter.call(
-      document.querySelectorAll(focussableElements),
+      $$(focussableElements),
       function (element) {
         // check for visibility while always include the current activeElement
         return (
@@ -76,6 +95,7 @@ function focusNextElement(amount) {
         );
       }
     );
+    //console.log("focussable", focussable);
     var index = focussable.indexOf(document.activeElement);
     if (index > -1) {
       const nextElement = focussable[(index + focussable.length + amount) % focussable.length] || focussable[0];

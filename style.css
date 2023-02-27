@@ -169,10 +169,6 @@ ul.menu a:focus::after {
   width: 100px;
 }
 
-#screen-title {
-  display: flex !important;
-}
-
 #game-title {
   width: 100vw;
   max-width: 1024px;
