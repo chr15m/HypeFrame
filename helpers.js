@@ -12,8 +12,12 @@ function nonTopLevelScreen(hash) {
 /* Normalize various types of input (touch screen, keyboard, gamepad). */
 
 function normalizeInputMethods() {
-  let useTouch = false;
+  normalizeBackbutton();
+  normalizeTouchUI();
+  normalizeGamepad();
+}
 
+function normalizeBackButton() {
   // Listen out for "esc" key and go "back" as long as a screen is loaded
   document.addEventListener("keydown", (ev) => {
     if (ev.key == "Escape" && nonTopLevelScreen(window.location.hash)) {
@@ -34,6 +38,10 @@ function normalizeInputMethods() {
       focusNextElement(1);
     }
   });
+}
+
+function normalizeTouchUI() {
+  let useTouch = false;
   // If touches are detected turn on the touchscreen interface
   document.addEventListener("touchstart", (ev) => {
     useTouch = true;
@@ -41,11 +49,14 @@ function normalizeInputMethods() {
     // Normalize the touchscreen buttons
     
   });
-  // Turn gamepad events into key presses
 }
 
-// TODO: function to change the play button to resume
+// Turn gamepad events into key presses
+function normalizeGamepad() {
+  
+}
 
+/*** helper functions ***/
 
 // Focus on the next focussable element on the page
 // https://stackoverflow.com/a/35173443
