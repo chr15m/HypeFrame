@@ -192,6 +192,11 @@ ul.menu a:focus::after {
   font-size: 2em;
 }
 
+.icon-notice.icon-active {
+  color: var(--color-1);
+  text-shadow: 0 0 2px var(--color-bg), 0 0 10px #999;
+}
+
 /* in-game styling */
 
 .sprite {
