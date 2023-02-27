@@ -54,6 +54,7 @@ button {
   padding: 0.25em 1em;
   border: none;
   border-bottom: 8px solid var(--color-1-shade);
+  cursor: pointer;
 }
 
 button:active {
